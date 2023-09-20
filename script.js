@@ -7,8 +7,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     document.addEventListener("keydown", function (event) {
         if (event.key === "F11" || event.key === "Enter") {
-            video.play();
-            //video.muted = false;
+            //video.play();
+            video.muted = false;
         }
     });
 

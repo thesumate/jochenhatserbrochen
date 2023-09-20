@@ -6,10 +6,10 @@ document.addEventListener("DOMContentLoaded", function () {
     //setTimeout(() => { video.muted = false }, 5000);
 
     document.addEventListener("keydown", function (event) {
-        if (event.key === "F11" || event.key === "Enter") {
+        //if (event.key === "F11" || event.key === "Enter") {
             video.play();
             //video.muted = false;
-        }
+        //}
     });
 
     

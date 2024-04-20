@@ -1,18 +1,25 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Video Webseite</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Daten empfangen</title>
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            const empfangsContainer = document.getElementById("empfangsContainer");
+
+            // Empfangene Daten vom Userskript
+            const empfangeneDaten = JSON.parse(localStorage.getItem("empfangeneDaten"));
+            if (empfangeneDaten) {
+                const wertAnzeigen = document.createElement("div");
+                wertAnzeigen.textContent = "Empfangener Wert: " + empfangeneDaten.wert;
+                empfangsContainer.appendChild(wertAnzeigen);
+            }
+        });
+    </script>
 </head>
 <body>
-    <div class="video-container">
-        <video id="rickVideo" autoplay controlsList="nodownload" preload="auto">
-            <source src="rickroll.mp4" type="video/mp4">
-            Dein Browser unterstützt das Video-Tag nicht.
-        </video>
-    </div>
-    <script src="script.js"></script>
+    <h1>Empfangene Daten</h1>
+    <div id="empfangsContainer"></div>
 </body>
 </html>
